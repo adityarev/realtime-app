@@ -4,7 +4,7 @@ interface ChannelProps {
   channel: {
     name: string
   }
-  setChannel: ({}) => void
+  setChannel: (channel: {}) => void
 }
 
 export class Channel extends React.Component<ChannelProps,any> {

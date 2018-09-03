@@ -3,7 +3,7 @@ import { Channel } from './Channel'
 
 interface ChannelListProps {
   channels: []
-  setChannel: ({}) => void
+  setChannel: (channel: {}) => void
 }
 
 export class ChannelList extends React.Component<ChannelListProps,any> {

@@ -9,14 +9,14 @@ interface ChannelListProps {
 export class ChannelList extends React.Component<ChannelListProps,any> {
   render() {
     const { channels, setChannel } = this.props
-    const mappedChannels = channels.map((channel) => {
+    const channelList = channels.map((channel) => {
       <Channel
         channel={channel}
         setChannel={setChannel} />
     })
 
     return (
-      <ul>{mappedChannels}</ul>
+      <ul>{channelList}</ul>
     )
   }
 }

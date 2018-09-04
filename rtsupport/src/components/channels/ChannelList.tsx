@@ -1,9 +1,10 @@
 import * as React from 'react'
+import * as I from '../../interfaces/CustomInterfaces'
 import { Channel } from './Channel'
 
 interface ChannelListProps {
-  channels: []
-  setChannel: (channel: {}) => void
+  channels: I.Channel[]
+  setChannel: (channel: I.Channel) => void
 }
 
 export class ChannelList extends React.Component<ChannelListProps,any> {

@@ -5,11 +5,16 @@ interface ChannelFormProps {
 }
 
 export class ChannelForm extends React.Component<ChannelFormProps,any> {
+  channelInput: HTMLInputElement
+  
+  setFocus() {
+    this.channelInput.focus()
+  }
+  
   onSubmit() {
-    const node = this.refs.channel
-    const channelName = node.value
+    const channelName = this.channelInput.value
     this.props.addChannel(channelName)
-    node.value = ''
+    this.channelInput.value = ''
   }
   
   render() {
@@ -17,7 +22,8 @@ export class ChannelForm extends React.Component<ChannelFormProps,any> {
       <form onSubmit={this.onSubmit}>
         <input
           type='text'
-          ref='channel' />
+          ref={(ref) => this.channelInput = ref as HTMLInputElement}
+          onClick={this.setFocus} />
       </form>
     )
   }

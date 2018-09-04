@@ -1,10 +1,9 @@
 import * as React from 'react'
+import * as I from '../../interfaces/CustomInterfaces'
 
 interface ChannelProps {
-  channel: {
-    name: string
-  }
-  setChannel: (channel: {}) => void
+  channel: I.Channel
+  setChannel: (channel: I.Channel) => void
 }
 
 export class Channel extends React.Component<ChannelProps,any> {

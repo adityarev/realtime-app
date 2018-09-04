@@ -7,11 +7,11 @@ interface ChannelFormProps {
 export class ChannelForm extends React.Component<ChannelFormProps,any> {
   channelInput: HTMLInputElement
   
-  setFocus() {
+  setFocus = () => {
     this.channelInput.focus()
   }
   
-  onSubmit() {
+  onSubmit = () => {
     const channelName = this.channelInput.value
     this.props.addChannel(channelName)
     this.channelInput.value = ''

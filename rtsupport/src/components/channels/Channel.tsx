@@ -7,7 +7,7 @@ interface ChannelProps {
 }
 
 export class Channel extends React.Component<ChannelProps,any> {
-  onClick() {
+  onClick = () => {
     const { channel, setChannel } = this.props
     setChannel(channel)
   }
